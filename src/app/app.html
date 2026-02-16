@@ -1,0 +1,250 @@
+<div class="bar">
+  <ui5-bar design="Header">
+    <ui5-label id="basic-label" slot="startContent"
+      ><img src="assets/schertech-branding.svg" alt=""
+    /></ui5-label>
+    <ui5-label id="basic-label"><img src="assets/visu-name.svg" alt="" /></ui5-label>
+
+    <div slot="endContent" style="display: flex; align-items: center; gap: 10px">
+      <ui5-text class="user-name">Elias Abram</ui5-text>
+      <ui5-button class="logout-btn" tooltip="Logout">Logout</ui5-button>
+      <div class="menu-btn">
+        <ui5-button #btnOpenBasic end-icon="slim-arrow-down">EN</ui5-button>
+        <ui5-menu #menuBasic header-text="Basic Menu with Items">
+          <ui5-menu-item text="GE"></ui5-menu-item>
+          <ui5-menu-item text="BG"></ui5-menu-item>
+        </ui5-menu>
+      </div>
+    </div>
+  </ui5-bar>
+</div>
+
+<div class="main">
+  <div class="sidebar">
+    <ui5-side-navigation>
+      <ui5-text class="legend">Legend</ui5-text>
+      <ui5-menu-separator></ui5-menu-separator>
+      <div class="production">
+        <ui5-text class="legend-text">Production</ui5-text>
+        <div class="pro">
+          <div class="icon-box">
+            <ui5-icon name="play"></ui5-icon>
+          </div>
+          <ui5-text class="side-text">07</ui5-text>
+        </div>
+      </div>
+      <div class="production">
+        <ui5-text class="legend-text">Standstill</ui5-text>
+        <div class="stand">
+          <div class="icon-box-2">
+            <ui5-icon name="pause"></ui5-icon>
+          </div>
+          <ui5-text class="side-text">02</ui5-text>
+        </div>
+      </div>
+      <div class="production">
+        <ui5-text class="legend-text">Setup</ui5-text>
+        <div class="set">
+          <div class="icon-box-3">
+            <ui5-icon name="action-settings"></ui5-icon>
+          </div>
+          <ui5-text class="side-text">03</ui5-text>
+        </div>
+      </div>
+      <div class="production">
+        <ui5-text class="legend-text">Machine Off</ui5-text>
+        <div class="machine">
+          <div class="icon-box-4">
+            <ui5-icon name="message-error"></ui5-icon>
+          </div>
+          <ui5-text class="side-text">04</ui5-text>
+        </div>
+      </div>
+      <div class="oee">
+        <ui5-text class="legend-text">OEE</ui5-text>
+        <div class="product">
+          <div class="icon-box-5">
+            <ui5-icon name="performance"></ui5-icon>
+          </div>
+          <ui5-text class="side-text">40%</ui5-text>
+        </div>
+      </div>
+    </ui5-side-navigation>
+  </div>
+  <div class="bar-2">
+    <ui5-bar design="Header">
+      <ui5-text class="machine-status" slot="startContent">Machine Status</ui5-text>
+      <div class="select" slot="endContent">
+        <ui5-text>Select Halls:</ui5-text>
+        <ui5-select>
+          <ui5-option>Production Hall 2</ui5-option>
+          <ui5-option selected>Production Hall 1</ui5-option>
+          <ui5-option>Production Hall 3</ui5-option>
+        </ui5-select>
+        <ui5-text>Select Machine Groups:</ui5-text>
+        <ui5-select>
+          <ui5-option>Machine group 2</ui5-option>
+          <ui5-option selected>Machine group 1</ui5-option>
+          <ui5-option>Machine group 3</ui5-option>
+        </ui5-select>
+        <ui5-text>Select Machines:</ui5-text>
+        <ui5-select>
+          <ui5-option>16 Machines</ui5-option>
+          <ui5-option selected>16 Machines</ui5-option>
+          <ui5-option>16 Machines</ui5-option>
+        </ui5-select>
+        <ui5-segmented-button accessible-name="Font style">
+          <ui5-segmented-button-item icon="table-view" selected></ui5-segmented-button-item>
+          <ui5-segmented-button-item icon="ui-notifications"></ui5-segmented-button-item>
+        </ui5-segmented-button>
+      </div>
+    </ui5-bar>
+
+    <div class="card">
+      <ui5-card>
+         <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+      <ui5-card>
+        <ui5-list separators="None" style="margin-block-end: 0.75rem;">
+            <ui5-li description="Software Architect">Richard Wilson
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+            <ui5-li description="Visual Designer">Elena Petrova
+                <ui5-avatar slot="image" shape="Square">
+                </ui5-avatar>
+            </ui5-li>
+        </ui5-list>
+      </ui5-card>
+    </div>
+  </div>
+</div>

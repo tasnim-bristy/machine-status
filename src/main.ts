@@ -1,6 +1,35 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { appConfig } from './app/app.config';
 import { App } from './app/app';
+import "@ui5/webcomponents/dist/Bar.js";
+import "@ui5/webcomponents/dist/Button.js";
+import "@ui5/webcomponents/dist/Avatar.js";
+import "@ui5/webcomponents/dist/Label";
+import "@ui5/webcomponents/dist/Icon.js";
+import "@ui5/webcomponents/dist/Text";
+import "@ui5/webcomponents/dist/Menu.js";
+import "@ui5/webcomponents/dist/MenuItem.js";
+import "@ui5/webcomponents/dist/MenuSeparator.js";
+import "@ui5/webcomponents-icons/dist/slim-arrow-down.js";
+import "@ui5/webcomponents-fiori/dist/SideNavigationItem.js";
+import "@ui5/webcomponents-fiori/dist/SideNavigationSubItem.js";
+import "@ui5/webcomponents-fiori/dist/SideNavigationGroup.js";
+import "@ui5/webcomponents-fiori/dist/SideNavigation.js";
+import "@ui5/webcomponents/dist/Select.js";
+import "@ui5/webcomponents/dist/Option.js";
+import "@ui5/webcomponents/dist/SegmentedButton.js";
+import "@ui5/webcomponents/dist/SegmentedButtonItem.js";
+import "@ui5/webcomponents-icons/dist/table-view.js";
+import "@ui5/webcomponents-icons/dist/ui-notifications.js";
+import "@ui5/webcomponents-icons/dist/play.js";
+import "@ui5/webcomponents-icons/dist/pause.js";
+import "@ui5/webcomponents-icons/dist/action-settings.js";
+import "@ui5/webcomponents-icons/dist/message-error.js";
+import "@ui5/webcomponents-icons/dist/performance.js";
+import "@ui5/webcomponents/dist/Card.js";
+import "@ui5/webcomponents/dist/CardHeader.js";
+import "@ui5/webcomponents/dist/List.js";
+import "@ui5/webcomponents/dist/ListItemStandard.js";
 
 bootstrapApplication(App, appConfig)
   .catch((err) => console.error(err));
