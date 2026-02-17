@@ -56,11 +56,16 @@ ui5-avatar img {
   margin: 12px 0 12px 12px;
 }
 
+.production-p{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
 .production {
   display: flex;
   flex-direction: column;
   align-items: center; 
-  margin-bottom: 32px;
 }
 
 .legend {
@@ -252,5 +257,148 @@ ui5-avatar img {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 12px;
-    height: ;
+}
+
+.machine-card{
+    border: 1px solid #30914C;
+    border-radius: 12px;
+    transition: all 0.6s;
+}
+
+.machine-card:hover{
+    border: 1px solid #30914C;
+}
+
+.card-container {
+  display: flex;
+  gap: 12px;
+  padding: 8px;
+  background-color: #F5FAE5;
+  transition: all 0.6s;
+}
+
+.card-container:hover{
+    background-color: #fff;
+}
+
+.icon-column {
+  background: #30914C;
+  border-radius: 8px;
+  padding: 8px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+}
+
+.icon-column ui5-icon{
+    color: #fff;
+}
+
+.card-title{
+    display: block;
+}
+
+.title-b{
+    font-size: 20px;
+    font-weight: 700;
+    color: #1D2D3E;
+}
+
+.title-p{
+    font-size: 16px;
+    font-weight: 600;
+    color: #1D2D3E;
+}
+
+.header-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: #fff;
+    border: 1px solid #AEB7C7;
+    border-radius: 8px;
+    width: 90px;
+    height: 36px;
+}
+
+.header-icon ui5-text{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.header-icon ui5-icon{
+    color: #005981;
+    width: 20px;
+    height: 22px;
+}
+
+.content {
+  flex: 1;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.info-row {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.info-row-2{
+  padding: 4px 0;
+  border-bottom: 1px dashed #ccc;
+}
+
+.info-row-wb{
+  display: flex;
+   justify-content: flex-start;
+  align-items: center;
+  padding: 8px 0;
+  gap: 4px;
+}
+
+.info-row-2{
+    display: flex;
+}
+
+.content-icon{
+    display: flex;
+    align-self: flex-end;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #fff;
+    border: 1px solid #AEB7C7;
+    border-radius: 8px;
+    width: 99px;
+    height: 30px;
+    margin: 0px;
+    margin-left: 60px;
+}
+
+.content-icon ui5-icon{
+    color: #F53232;
+}
+
+.info-text-1{
+    padding-left: 30px;
+}
+.info-text-2{
+    padding-left: 40px;
+}
+
+.info-row span{
+    padding-right: 4px;
+}
+
+.info-row-wb span{
+    padding-right: 4px;
 }
