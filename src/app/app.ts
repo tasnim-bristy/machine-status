@@ -1,13 +1,14 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.html',
-  styleUrl: './app.css',
+  styleUrls: ['./app.css'],
+  standalone: true,
+  imports: [CommonModule],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class App {
-  protected readonly title = signal('machine-status');
+  selectedView: 'table' | 'notifications' = 'table';
 }

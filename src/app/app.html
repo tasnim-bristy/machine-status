@@ -26,50 +26,50 @@
       <ui5-menu-separator></ui5-menu-separator>
       <div class="production-p">
         <div class="production">
-        <ui5-text class="legend-text">Production</ui5-text>
-        <div class="pro">
-          <div class="icon-box">
-            <ui5-icon name="play"></ui5-icon>
+          <ui5-text class="legend-text">Production</ui5-text>
+          <div class="pro">
+            <div class="icon-box">
+              <ui5-icon name="play"></ui5-icon>
+            </div>
+            <ui5-text class="side-text">07</ui5-text>
           </div>
-          <ui5-text class="side-text">07</ui5-text>
         </div>
-      </div>
-      <div class="production">
-        <ui5-text class="legend-text">Standstill</ui5-text>
-        <div class="stand">
-          <div class="icon-box-2">
-            <ui5-icon name="pause"></ui5-icon>
+        <div class="production">
+          <ui5-text class="legend-text">Standstill</ui5-text>
+          <div class="stand">
+            <div class="icon-box-2">
+              <ui5-icon name="pause"></ui5-icon>
+            </div>
+            <ui5-text class="side-text">02</ui5-text>
           </div>
-          <ui5-text class="side-text">02</ui5-text>
         </div>
-      </div>
-      <div class="production">
-        <ui5-text class="legend-text">Setup</ui5-text>
-        <div class="set">
-          <div class="icon-box-3">
-            <ui5-icon name="action-settings"></ui5-icon>
+        <div class="production">
+          <ui5-text class="legend-text">Setup</ui5-text>
+          <div class="set">
+            <div class="icon-box-3">
+              <ui5-icon name="action-settings"></ui5-icon>
+            </div>
+            <ui5-text class="side-text">03</ui5-text>
           </div>
-          <ui5-text class="side-text">03</ui5-text>
         </div>
-      </div>
-      <div class="production">
-        <ui5-text class="legend-text">Machine Off</ui5-text>
-        <div class="machine">
-          <div class="icon-box-4">
-            <ui5-icon name="message-error"></ui5-icon>
+        <div class="production">
+          <ui5-text class="legend-text">Machine Off</ui5-text>
+          <div class="machine">
+            <div class="icon-box-4">
+              <ui5-icon name="message-error"></ui5-icon>
+            </div>
+            <ui5-text class="side-text">04</ui5-text>
           </div>
-          <ui5-text class="side-text">04</ui5-text>
         </div>
-      </div>
-      <div class="oee">
-        <ui5-text class="legend-text">OEE</ui5-text>
-        <div class="product">
-          <div class="icon-box-5">
-            <ui5-icon name="performance"></ui5-icon>
+        <div class="oee">
+          <ui5-text class="legend-text">OEE</ui5-text>
+          <div class="product">
+            <div class="icon-box-5">
+              <ui5-icon name="performance"></ui5-icon>
+            </div>
+            <ui5-text class="side-text">40%</ui5-text>
           </div>
-          <ui5-text class="side-text">40%</ui5-text>
         </div>
-      </div>
       </div>
     </ui5-side-navigation>
   </div>
@@ -96,21 +96,33 @@
           <ui5-option>16 Machines</ui5-option>
         </ui5-select>
         <ui5-segmented-button accessible-name="Font style">
-          <ui5-segmented-button-item icon="table-view" selected></ui5-segmented-button-item>
-          <ui5-segmented-button-item icon="ui-notifications"></ui5-segmented-button-item>
+          <ui5-segmented-button-item
+            icon="table-view"
+            id="table-view"
+            selected
+            (click)="selectedView = 'table'"
+          >
+          </ui5-segmented-button-item>
+
+          <ui5-segmented-button-item
+            icon="ui-notifications"
+            id="notifications"
+            (click)="selectedView = 'notifications'"
+          >
+          </ui5-segmented-button-item>
         </ui5-segmented-button>
       </div>
     </ui5-bar>
 
     <div class="card">
       <ui5-card class="machine-card">
-        <div class="card-container">
+        <div class="card-container" *ngIf="selectedView === 'table'">
           <!-- Left icon column -->
           <div class="icon-column">
-            <ui5-icon name="play" style="width:40px; height:30px;"></ui5-icon>
-            <ui5-icon name="time-entry-request" style="width:40px; height:17px;"></ui5-icon>
-            <ui5-icon name="goal" style="width:40px; height:17px;"></ui5-icon>
-            <ui5-icon name="machine" style="width:40px; height:17px;"></ui5-icon>
+            <ui5-icon name="play" style="width: 40px; height: 30px"></ui5-icon>
+            <ui5-icon name="time-entry-request" style="width: 40px; height: 17px"></ui5-icon>
+            <ui5-icon name="goal" style="width: 40px; height: 17px"></ui5-icon>
+            <ui5-icon name="machine" style="width: 40px; height: 17px"></ui5-icon>
           </div>
 
           <!-- Right content -->
@@ -133,7 +145,7 @@
             <div class="info-row info-row-2">
               <ui5-label>Cycle Time</ui5-label>
               <ui5-badge><span>:</span>00T 00:00:00</ui5-badge>
-               <div class="content-icon">
+              <div class="content-icon">
                 <ui5-icon name="fob-watch"></ui5-icon>
                 <ui5-text>00:00</ui5-text>
               </div>
@@ -149,6 +161,97 @@
               <ui5-text class="info-text-2"><span>:</span>7346058 | Planet Carrier</ui5-text>
             </div>
           </div>
+        </div>
+
+        <div class="card-container-2" *ngIf="selectedView === 'notifications'">
+          <!-- Left icon column -->
+          <div class="icon-column">
+            <ui5-icon name="play" style="width: 40px; height: 30px"></ui5-icon>
+          </div>
+
+          <!-- Right content -->
+          <div class="content">
+            <div class="header-2">
+              <div class="card-title">
+                <div class="title-b">
+                  <ui5-text>Machine Name</ui5-text>
+                </div>
+                <div class="title-p">
+                  <ui5-text>Machine ID</ui5-text>
+                </div>
+              </div>
+              <div class="header-icon">
+                <ui5-icon name="performance"></ui5-icon>
+                <ui5-text>00%</ui5-text>
+              </div>
+            </div>
+          </div>
+        </div>
+      </ui5-card>
+
+      <ui5-card class="mw-m4">
+        <div class="card-container-3" *ngIf="selectedView === 'table'">
+          <!-- Right content -->
+          <div class="content">
+            <div class="header-3">
+              <div class="icon-title">
+                <div class="icon-column-2">
+                <ui5-icon name="media-pause" style="width: 40px; height: 30px"></ui5-icon>
+              </div>
+              <div class="card-title">
+                <div class="title-mw-b">
+                  <ui5-text>520 to MW-M4</ui5-text>
+                </div>
+                <div class="title-mw-p">
+                  <ui5-text>010-008</ui5-text>
+                </div>
+              </div>
+              </div>
+              <div class="header-percent">
+                <ui5-text>95%</ui5-text>
+              </div>
+            </div>
+
+            <div class="info-row info-row-2">
+              <ui5-label show-colon>Cycle Time</ui5-label>
+              <ui5-badge>01:32:25</ui5-badge>
+              <div class="content-icon">
+                <ui5-icon name="fob-watch"></ui5-icon>
+                <ui5-text>04:20</ui5-text>
+              </div>
+            </div>
+
+            <div class="info-row">
+              <ui5-label show-colon>Standard Time</ui5-label>
+              <ui5-text class="info-text-1">02:30:00</ui5-text>
+            </div>
+
+            <div class="info-row-wb">
+              <ui5-label show-colon>Item</ui5-label>
+              <ui5-text class="info-text-2">7346058 | Planet Carrier</ui5-text>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-container-3">
+          <div class="header-3"  *ngIf="selectedView === 'notifications'">
+              <div class="icon-title">
+                <div class="icon-column-2">
+                <ui5-icon name="media-pause" style="width: 40px; height: 30px"></ui5-icon>
+              </div>
+              <div class="card-title">
+                <div class="title-mw-b">
+                  <ui5-text>520 to MW-M4</ui5-text>
+                </div>
+                <div class="title-mw-p">
+                  <ui5-text>010-008</ui5-text>
+                </div>
+              </div>
+              </div>
+              <div class="header-percent">
+                <ui5-text>95%</ui5-text>
+              </div>
+            </div>
         </div>
       </ui5-card>
     </div>

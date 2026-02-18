@@ -34,6 +34,7 @@ import "@ui5/webcomponents-icons/dist/time-entry-request.js";
 import "@ui5/webcomponents-icons/dist/goal.js";
 import "@ui5/webcomponents-icons/dist/machine.js";
 import "@ui5/webcomponents-icons/dist/fob-watch.js";
+import "@ui5/webcomponents-icons/dist/media-pause.js";
 
 bootstrapApplication(App, appConfig)
   .catch((err) => console.error(err));
