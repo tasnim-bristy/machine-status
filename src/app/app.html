@@ -143,8 +143,8 @@
             </div>
 
             <div class="info-row info-row-2">
-              <ui5-label>Cycle Time</ui5-label>
-              <ui5-badge><span>:</span>00T 00:00:00</ui5-badge>
+              <ui5-label show-colon>Cycle Time</ui5-label>
+              <ui5-text class="machine-text">00T 00:00:00</ui5-text>
               <div class="content-icon">
                 <ui5-icon name="fob-watch"></ui5-icon>
                 <ui5-text>00:00</ui5-text>
@@ -152,13 +152,13 @@
             </div>
 
             <div class="info-row">
-              <ui5-label>Target</ui5-label>
-              <ui5-text class="info-text-1"><span>:</span>00:00:00</ui5-text>
+              <ui5-label show-colon>Target</ui5-label>
+              <ui5-text class="machine-text">00:00:00</ui5-text>
             </div>
 
             <div class="info-row-wb">
-              <ui5-label>Part</ui5-label>
-              <ui5-text class="info-text-2"><span>:</span>7346058 | Planet Carrier</ui5-text>
+              <ui5-label show-colon>Part</ui5-label>
+              <ui5-text class="machine-text">7346058 | Planet Carrier</ui5-text>
             </div>
           </div>
         </div>
@@ -190,14 +190,14 @@
       </ui5-card>
 
       <ui5-card class="mw-m4">
+        <!-- TABLE VIEW -->
         <div class="card-container-3" *ngIf="selectedView === 'table'">
-          <!-- Right content -->
-          <div class="content">
-            <div class="header-3">
-              <div class="icon-title">
-                <div class="icon-column-2">
+          <div class="header-3">
+            <div class="icon-title">
+              <div class="icon-column-2">
                 <ui5-icon name="media-pause" style="width: 40px; height: 30px"></ui5-icon>
               </div>
+
               <div class="card-title">
                 <div class="title-mw-b">
                   <ui5-text>520 to MW-M4</ui5-text>
@@ -206,39 +206,44 @@
                   <ui5-text>010-008</ui5-text>
                 </div>
               </div>
-              </div>
-              <div class="header-percent">
-                <ui5-text>95%</ui5-text>
-              </div>
             </div>
 
-            <div class="info-row info-row-2">
+            <div class="header-percent">
+              <ui5-text>95%</ui5-text>
+            </div>
+          </div>
+
+          <div class="content">
+            <div class="mw-row-1">
               <ui5-label show-colon>Cycle Time</ui5-label>
-              <ui5-badge>01:32:25</ui5-badge>
-              <div class="content-icon">
+              <ui5-text class="info-text">01:32:25</ui5-text>
+
+              <div class="content-time">
                 <ui5-icon name="fob-watch"></ui5-icon>
-                <ui5-text>04:20</ui5-text>
+                <ui5-text class="info-text">04:20</ui5-text>
               </div>
             </div>
 
-            <div class="info-row">
+            <div class="mw-row-2">
               <ui5-label show-colon>Standard Time</ui5-label>
-              <ui5-text class="info-text-1">02:30:00</ui5-text>
+              <ui5-text class="info-text">02:30:00</ui5-text>
             </div>
 
-            <div class="info-row-wb">
+            <div class="mw-row-wb">
               <ui5-label show-colon>Item</ui5-label>
-              <ui5-text class="info-text-2">7346058 | Planet Carrier</ui5-text>
+              <ui5-text class="info-text"> 7346058 | Planet Carrier </ui5-text>
             </div>
           </div>
         </div>
 
-        <div class="card-container-3">
-          <div class="header-3"  *ngIf="selectedView === 'notifications'">
-              <div class="icon-title">
-                <div class="icon-column-2">
+        <!-- NOTIFICATION VIEW -->
+        <div class="card-container-4" *ngIf="selectedView === 'notifications'">
+          <div class="header-4">
+            <div class="icon-title">
+              <div class="icon-column-2">
                 <ui5-icon name="media-pause" style="width: 40px; height: 30px"></ui5-icon>
               </div>
+
               <div class="card-title">
                 <div class="title-mw-b">
                   <ui5-text>520 to MW-M4</ui5-text>
@@ -247,11 +252,12 @@
                   <ui5-text>010-008</ui5-text>
                 </div>
               </div>
-              </div>
-              <div class="header-percent">
-                <ui5-text>95%</ui5-text>
-              </div>
             </div>
+
+            <div class="header-percent">
+              <ui5-text>95%</ui5-text>
+            </div>
+          </div>
         </div>
       </ui5-card>
     </div>
